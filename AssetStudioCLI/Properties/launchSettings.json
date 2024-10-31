@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "AssetStudioCLI": {
+      "commandName": "Project",
+      "commandLineArgs": "C:\\Users\\Blank\\AppData\\Local\\Ankama\\Dofus-beta\\Dofus_Data\\StreamingAssets\\Content\\Picto\\UI\\job_.bundle C:\\Users\\Blank\\AppData\\Local\\Ankama\\Dofus-beta\\Dofus_Data\\StreamingAssets\\Content\\Picto\\UI\\out"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}

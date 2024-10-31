@@ -13,26 +13,26 @@ using Object = AssetStudio.Object;
 
 namespace AssetStudioGUI
 {
-    internal enum ExportType
+    public enum ExportType
     {
         Convert,
         Raw,
         Dump
     }
 
-    internal enum ExportFilter
+    public enum ExportFilter
     {
         All,
         Selected,
         Filtered
     }
 
-    internal enum ExportListType
+    public enum ExportListType
     {
         XML
     }
 
-    internal static class Studio
+    public static class Studio
     {
         public static AssetsManager assetsManager = new AssetsManager();
         public static AssemblyLoader assemblyLoader = new AssemblyLoader();
@@ -82,7 +82,7 @@ namespace AssetStudioGUI
             return extractedCount;
         }
 
-        private static int ExtractBundleFile(FileReader reader, string savePath)
+        public static int ExtractBundleFile(FileReader reader, string savePath)
         {
             StatusStripUpdate($"Decompressing {reader.FileName} ...");
             var bundleFile = new BundleFile(reader);
@@ -95,7 +95,7 @@ namespace AssetStudioGUI
             return 0;
         }
 
-        private static int ExtractWebDataFile(FileReader reader, string savePath)
+        public static int ExtractWebDataFile(FileReader reader, string savePath)
         {
             StatusStripUpdate($"Decompressing {reader.FileName} ...");
             var webFile = new WebFile(reader);
@@ -108,7 +108,7 @@ namespace AssetStudioGUI
             return 0;
         }
 
-        private static int ExtractStreamFile(string extractPath, StreamFile[] fileList)
+        public static int ExtractStreamFile(string extractPath, StreamFile[] fileList)
         {
             int extractedCount = 0;
             foreach (var file in fileList)
